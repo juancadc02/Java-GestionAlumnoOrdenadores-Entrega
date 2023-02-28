@@ -18,20 +18,17 @@ public interface ServicioConsultas {
 	//Consultas para los alumno.
 	
 	/**
-	 * insertarAlumno: Inserta en base de un nuevo alumno
+	 * insertarAlumno: Inserta en base de datos un nuevo alumno
 	 */
 	public void insertarAlumno(AlumnoDAO alumnoDAO) throws Exception;
-	
-	public AlumnoDAO buscarAlumnoDePortatil(PortatilDAO portatilDAO) throws Exception;
-	
 	/**
-	 * 
-	 * 
+	 * buscarAlumnoDePortatil: Compara los numero identificadores de los portatiles para ver si el alumno tiene el mismo numero identificador que el portatil
+	 */
+	public AlumnoDAO buscarAlumnoDePortatil(PortatilDAO portatilDAO) throws Exception;
+	/**
 	 * listadoDeAlumno: Lista todos los alumnos de la base de datos 
 	 */
 	public List<AlumnoDAO> listadoDeAlumno() throws Exception;
-	
-	
 	/**
 	 * eliminarAlumnoId:Elimina al alumno por el id introducido
 	 */
@@ -40,9 +37,10 @@ public interface ServicioConsultas {
 	
 	//Consulta Portatiles
 	
+	/**
+	 * listaDePortatilesLibres:Devuelve un listado de los id de los ordenadores libres.
+	 */
 	public List<Integer> listaDePortatilesLibres() throws Exception;
-	
-	
 	/**
 	 * elegirPortatilPorId: Select tabla portatil por id 
 	 */

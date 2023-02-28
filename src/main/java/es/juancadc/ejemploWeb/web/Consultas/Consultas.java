@@ -28,8 +28,6 @@ public class Consultas implements ServicioConsultas {
 	
 	@Autowired
 	private RepositorioAlumno ra;
-	@Autowired
-	private RepositorioPortatil rp;
 	
 	
 	//*******************Consultas alumnos*******************************
@@ -59,7 +57,6 @@ public class Consultas implements ServicioConsultas {
 					if(alumnoDAO.getPortatilDAO().getNumeroIdentificador() == portatilDAO.getNumeroIdentificador())
 						return alumnoDAO;
 				}	
-				
 				return null;
 	}
 	
@@ -67,6 +64,11 @@ public class Consultas implements ServicioConsultas {
 	
 	
 	//Consultas de portatiles
+	
+	@Autowired
+	private RepositorioPortatil rp;
+	
+	
 	@Override
 	public List<Integer> listaDePortatilesLibres() throws Exception {
 		
