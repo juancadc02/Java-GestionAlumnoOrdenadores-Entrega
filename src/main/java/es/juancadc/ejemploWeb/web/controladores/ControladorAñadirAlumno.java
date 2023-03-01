@@ -45,7 +45,7 @@ public class ControladorAñadirAlumno {
 			listIDsPortailesLibres = consulta.listaDePortatilesLibres();
 		} catch (Exception e) {
 			
-			e.printStackTrace();
+			return new ModelAndView("paginaError");
 		}
     	
     	//Creamos una lista de String por si en el caso de que no haya portatiles libre,imprima el mensaje 
@@ -88,14 +88,11 @@ public class ControladorAñadirAlumno {
 		        //Creamos una lista de alumnoDTO y añadimor el alumnoDTO a esa lista
 		        List<AlumnoDTO> alumnoMostrar= new ArrayList<AlumnoDTO>();
 		        alumnoMostrar.add(alumnoDTO);
-		    
-		        
 		        return new ModelAndView("alumnoAñadidoCorrectamente","lista",alumnoMostrar);
 		        
 		    } catch (Exception e) {
-		        e.printStackTrace();
 		    	//Si da error mostramos una vista de error 
-		        return new ModelAndView("errorRegistroAlumno");
+		        return new ModelAndView("paginaError");
 		    }
 	}
 		

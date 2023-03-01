@@ -47,7 +47,7 @@ public class ControladorListadoCompleto {
 		return new ModelAndView("listadoCompleto","miModelo",miModelo);
 		}catch (Exception e) {
 
-			return new ModelAndView();
+			return new ModelAndView("paginaError");
 		}
 		
 		

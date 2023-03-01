@@ -82,7 +82,7 @@ background-color: #FFFACD;
 		<!-- Formulario de buscar ordenador de alumno  -->
 <div class="container my-4" >
   <div class="col mx-auto bg-light p10">
-    <h1 class="text-center mb-4">Baja de Alumno</h1>
+    <h1 class="text-center mb-4">Introduce el ID del Alumno</h1>
     <form action="buscarPortatilPorAlumno" method="post">
      <div class="form-group row">
                 <div class="col-sm-4 col-form-label"></div>

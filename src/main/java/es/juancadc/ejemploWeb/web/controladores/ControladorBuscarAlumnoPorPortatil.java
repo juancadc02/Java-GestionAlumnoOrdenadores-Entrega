@@ -42,7 +42,7 @@ public class ControladorBuscarAlumnoPorPortatil {
 
 		}catch (Exception e) {
 
-			return new ModelAndView();
+			return new ModelAndView("paginaError");
 
 		}
 		
@@ -56,7 +56,7 @@ public class ControladorBuscarAlumnoPorPortatil {
 			
 			//Comprobamos si ese portatil pertenece a algun alumno
 			if(alumnoDAO==null)
-				return new ModelAndView();
+				return new ModelAndView("errorBuscarAlumnoPorPortatil");
 				
 			
 			//Paso el alumno a DTO para mostrarlo
@@ -67,7 +67,7 @@ public class ControladorBuscarAlumnoPorPortatil {
 			listaAlumnoDto.add(alumnoDto);
 			return new ModelAndView("resultadoBuscarAlumnoPorPortatil","lista",listaAlumnoDto);
 			}catch (Exception e) {
-				return new ModelAndView();		
+				return new ModelAndView("paginaError");		
 				
 			}
 

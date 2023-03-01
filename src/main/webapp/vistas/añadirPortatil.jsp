@@ -17,7 +17,7 @@ background-color: #FFFACD;
 				<!-- Barra de navegacion -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Alta Portatil</a>
+  <a class="navbar-brand" href="#">Registro Portatil</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" 
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
           aria-expanded="false" aria-label="Toggle navigation">

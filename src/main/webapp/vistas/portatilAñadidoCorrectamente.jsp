@@ -21,7 +21,7 @@ body {
 	background-color: #FFFACD;
 }
 </style>
-<title>Insert title here</title>
+<title>Datos Portatil Registrado</title>
 </head>
 <body>
 
@@ -29,7 +29,7 @@ body {
 
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Datos Alumno Registrado</a>
+		<a class="navbar-brand" href="#">Datos Portatil Registrado</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"

@@ -28,10 +28,10 @@ background-color: #FFFACD;
     
     				<!--  Ir a registro de alumnos -->
       <li class="nav-item active">
-        <a onclick="window.location.href='añadirNuevoAlumno';return false;" class="nav-link" href="#">Alta Alumno </a>
+        <a onclick="window.location.href='añadirNuevoAlumno';return false;" class="nav-link" href="#">Registro Alumno </a>
       </li>
        <li class="nav-item active">
-        <a onclick="window.location.href='añadirNuevoPortatil';return false;" class="nav-link" href="#">Alta Portatil </a>
+        <a onclick="window.location.href='añadirNuevoPortatil';return false;" class="nav-link" href="#">Registro Portatil </a>
       </li>
       <li class="nav-item active">
         <a onclick="window.location.href='darDeBajaAlumno';return false;" class="nav-link" href="#">Baja Alumno </a>

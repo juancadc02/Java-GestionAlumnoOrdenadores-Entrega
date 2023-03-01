@@ -40,7 +40,7 @@ public class ControladorBajaAlumno {
 			return new ModelAndView("bajaAlumno","listaDeAlumno",listaDeAlumnosDTO);
 
 		} catch (Exception e) {
-			return new ModelAndView("errorAlCargarLaPagina");
+			return new ModelAndView("paginaError");
 		}
 		
 		
@@ -58,11 +58,11 @@ public class ControladorBajaAlumno {
 			return new ModelAndView("alumnoEliminadoCorrectamente");
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			return new ModelAndView("paginaError");
 		}
 		
 		
 		
-		return new ModelAndView();
+		
 	}
 }

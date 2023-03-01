@@ -40,7 +40,7 @@ public class ControladorBuscarPortatilPorAlumno {
 			
 			return new ModelAndView("buscarPortatilPorAlumno","lista",listaAlumnoDTO);
 		}catch (Exception e) {
-			return new ModelAndView("errorAlCargarLaPagina");
+			return new ModelAndView("paginaError");
 		}
 		
 	}
@@ -65,7 +65,7 @@ public class ControladorBuscarPortatilPorAlumno {
 		return new ModelAndView("resultadoBuscarPortatilPorAlumno","portatil",listaPortatilDTO);
 		
 		}catch (Exception e) {
-			return new ModelAndView();
+			return new ModelAndView("paginaError");
 		}
 		
 	}

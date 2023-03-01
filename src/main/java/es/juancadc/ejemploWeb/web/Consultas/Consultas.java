@@ -60,7 +60,11 @@ public class Consultas implements ServicioConsultas {
 				return null;
 	}
 	
-	
+	@Override
+	public AlumnoDAO buscarAlumnoPorId(int numeroAlumno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	//Consultas de portatiles
@@ -141,6 +145,7 @@ public class Consultas implements ServicioConsultas {
 	public PortatilDAO seleccionarPortatilPorID(Integer id) throws Exception {
 		return rp.findById(id).orElse(null);
 	}
+	
 	
 	
 	

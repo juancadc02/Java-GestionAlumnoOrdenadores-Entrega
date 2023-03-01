@@ -79,55 +79,5 @@ window.onload = function() {
   </div>
   
 
-
-
-
-
-
-
-<!-- <table class="tablaTitle">
-<tr>
-<td><h1>Añadir Alumno</h1></td>
-</tr>
-
-</table>
-<br/><br/>
-<form action="añadirAlumno" method="post">
-
-<table class="tablaRegistro" border="0">
-
-
-<tr>
-<th> <label for="nombre">Nombre:</label></th>
-<td><input type="text" name="nombreAlumno" id="nombre"></td>
-</tr>
-
-
-<tr>
-<th> <label for="apellidos">Telefono:</label></th>
-<td><input type="text" name="telefonoAlumno" id="apellidos"></td>
-</tr>
-
-
-<tr>
-<th> <label for="dni">Marca Portatil:</label></th>
-<td><input type="text" name="marcaPortatil" id="dni"></td>
-</tr>
-
-<tr>
-<th> <label for="dni">Modelo Portatil:</label></th>
-<td><input type="text" name="modeloPortatil" id="dni"></td>
-</tr>
-
-
-<tr>
-<td colspan="3" align="center"><br/><br/><input type="submit" name="button" id="button" value="Aadir Cliente"></td>
-<td  colspan="5" align="center"><br/><br/><input type="button" value="Volver a Inicio" onclick="window.location.href='paginaInicio';return false;"/></td>
-</tr>
-
-</table>
-</form>
- -->
-
 </body>
 </html>

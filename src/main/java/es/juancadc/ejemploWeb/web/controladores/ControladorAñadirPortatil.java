@@ -21,11 +21,6 @@ public class ControladorAñadirPortatil {
 	private Consultas consultas;
 	
 	ToDtoServicioImpl ToDto = new ToDtoServicioImpl();
-	
-	
-	
-	
-	
 	@RequestMapping(value="/añadirNuevoPortatil")
 	public ModelAndView cargarPaginaAñadirPortatil() {
 		
@@ -54,7 +49,7 @@ public class ControladorAñadirPortatil {
 		
 		return new ModelAndView("portatilAñadidoCorrectamente","lista",listaPortatil);
 		}catch (Exception e) {
-				return new ModelAndView();
+				return new ModelAndView("paginaError");
 }
 	}
 }

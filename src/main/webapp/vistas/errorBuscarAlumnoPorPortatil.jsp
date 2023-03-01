@@ -26,8 +26,8 @@
 <body>
   <div class="container text-center">
     <h1 class="error-message">Oops!</h1>
-    <p>Se ha producido un error en el Registro.</p>
-    <a onclick="window.location.href='paginaInicio';return false;" href="#" class="btn btn-primary">Volver a inicio</a>
+    <p>Se ha producido un error inesperado.</p>
+    <a onclick="window.location.href='buscarAlumnoPorPortatil';return false;" href="#" class="btn btn-primary">Volver a Buscar Alumno Por Portatil</a>
   </div>
   <!-- jQuery and Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

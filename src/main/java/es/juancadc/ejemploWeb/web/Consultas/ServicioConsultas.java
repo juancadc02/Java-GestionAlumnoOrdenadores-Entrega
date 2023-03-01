@@ -34,6 +34,7 @@ public interface ServicioConsultas {
 	 */
 	public void bajaAlumno(Integer numeroAlumno);
 	
+	public AlumnoDAO buscarAlumnoPorId(int numeroAlumno);
 	
 	//Consulta Portatiles
 	
