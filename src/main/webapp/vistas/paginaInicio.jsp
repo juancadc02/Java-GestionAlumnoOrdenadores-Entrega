@@ -52,6 +52,31 @@ background-color: #FFFACD;
   </div>
 </nav>
 		
+		 <!-- Contenido principal -->
+   <div class=" jumbotron-fluid bg-light">
+  <div class="container mt-4">
+    <h1 class="display-3">Bienvenido a Gestion de Alumno</h1>
+  </div>
+</div>
+		
+		
+		
+		
+		
+		 <!-- Pie de página -->
+  <footer class="bg-light py-3 fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>Para mas informacion acerca de esta web<p>
+<p><a href="https://www.eltiempo.es/sevilla.html">Pulse aqui</a></p>
+        </div>
+        <div class="col-md-10 text-md-right">
+          <p>© 2023 Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
   
 </body>
 

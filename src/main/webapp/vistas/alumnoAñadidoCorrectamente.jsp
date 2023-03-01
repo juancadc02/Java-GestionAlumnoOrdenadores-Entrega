@@ -57,26 +57,36 @@ body {
     <h1 class="text-center mb-4">Datos Alumno Registrado</h1>
     <form method="post">
      
-<table class="tablaMuestraAlumno" >
-<tr>
-
-<th>Nombre</th>
-
-<th>&nbsp;&nbsp;Telefono</th>
-
-</tr>
-
-<c:forEach var="listaAlumno" items="${lista}">
-
-	<tr>
-	<td>${listaAlumno.nombreAlumno}</td>
-	<td>&nbsp;&nbsp;${listaAlumno.telefonoAlumno}</td>
-	</tr>
-
-</c:forEach>
-
-</table>
-
+	  <table class="table table-striped">
+  		<thead>
+    		<tr>
+      			<th scope="col"></th>
+      			<th scope="col">ID Alumno</th>
+      			<th scope="col">Nombre</th>
+      			<th scope="col">Teléfono</th>
+      			<th scope="col">Numero Identificador</th>
+      			<th scope="col">Marca Portatil</th>
+      			<th scope="col">Modelo Portatil</th>
+    		</tr>
+  		</thead>
+  		<tbody> 			
+  			<c:forEach var="alumno" items="${miModelo.listaAlumno}" varStatus="loop">
+  				<tr>
+    				<th scope="row">${loop.index+1}</th>
+    				<td>${alumno.numeroAlumno}</td>
+    				<td>${alumno.nombreAlumno}</td>
+    				<td>${alumno.telefonoAlumno}</td>
+    			<c:forEach var="portatil" items="${miModelo.listaPortatil}" varStatus="innerLoop">
+      				<c:if test="${innerLoop.index == loop.index}">
+        				<td>${portatil.identificadorPortatil}</td>
+        				<td>${portatil.marcaPortatil}</td>
+        				<td>${portatil.modeloPortatil}</td>
+      				</c:if>
+    			</c:forEach>
+  				</tr>
+			</c:forEach>		
+  		</tbody>	
+	</table>
     </form>
     </div>
   </div>

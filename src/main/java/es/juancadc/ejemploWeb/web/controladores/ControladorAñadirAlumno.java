@@ -1,7 +1,10 @@
 package es.juancadc.ejemploWeb.web.controladores;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +15,7 @@ import es.juancadc.ejemploWeb.aplicacion.DAO.AlumnoDAO;
 import es.juancadc.ejemploWeb.aplicacion.DAO.PortatilDAO;
 import es.juancadc.ejemploWeb.web.Consultas.Consultas;
 import es.juancadc.ejemploWeb.web.DTO.AlumnoDTO;
+import es.juancadc.ejemploWeb.web.DTO.PortatilDTO;
 import es.juancadc.ejemploWeb.web.DTO.ToDtoServicioImpl;
 import es.juancadc.ejemploWeb.web.DTO.ToDaoServicioImpl;
 
@@ -84,11 +88,20 @@ public class ControladorAñadirAlumno {
 		        
 		        //Pasamos el objeto a DTO para mostrarlo por la vista 
 		        AlumnoDTO alumnoDTO=ToDto.AlumnoToDTO(alumnoDAO);
-		       
+		       PortatilDTO portatilDto=ToDto.PortatilToDTO(portatilDAO);
 		        //Creamos una lista de alumnoDTO y añadimor el alumnoDTO a esa lista
 		        List<AlumnoDTO> alumnoMostrar= new ArrayList<AlumnoDTO>();
 		        alumnoMostrar.add(alumnoDTO);
-		        return new ModelAndView("alumnoAñadidoCorrectamente","lista",alumnoMostrar);
+		      
+		        //Creamos una lista de portatilDTO y añadimor el portatildto a esa lista
+		        List<PortatilDTO> portatiMostrar=new ArrayList<PortatilDTO>();
+		        portatiMostrar.add(portatilDto);
+		        
+		        //Los metemos en un mapa.
+		        Map<String, Object> miModelo=new HashMap<String,Object>();
+		        miModelo.put("listaAlumno", alumnoMostrar);
+		        miModelo.put("listaPortatil", portatiMostrar);
+		        return new ModelAndView("alumnoAñadidoCorrectamente","miModelo",miModelo);
 		        
 		    } catch (Exception e) {
 		    	//Si da error mostramos una vista de error 

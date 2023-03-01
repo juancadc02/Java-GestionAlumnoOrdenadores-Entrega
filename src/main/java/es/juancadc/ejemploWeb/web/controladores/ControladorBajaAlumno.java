@@ -2,6 +2,7 @@ package es.juancadc.ejemploWeb.web.controladores;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -52,10 +53,17 @@ public class ControladorBajaAlumno {
 	public ModelAndView formularioBajaAlumno(@RequestParam("numeroAlumno") Integer numeroAlumno) {
 		
 		try {
-			
+			List<AlumnoDAO> listaAlumno= new ArrayList<AlumnoDAO>();
+			Optional<AlumnoDAO> optionalAlumnoDAO=consultas.buscarAlumnoPorIdPersonal(numeroAlumno);
+			if(optionalAlumnoDAO.isPresent()) {
+				AlumnoDAO alum=optionalAlumnoDAO.get();
+				listaAlumno.add(alum);
+			}
+			//Paso la listaAlumno a DTO
+			List<AlumnoDTO> listaAlumnoDto=ToDto.ListAlumnoToDTO(listaAlumno);
 			consultas.bajaAlumno(numeroAlumno);
 			
-			return new ModelAndView("alumnoEliminadoCorrectamente");
+			return new ModelAndView("alumnoEliminadoCorrectamente","alumnoEliminado",listaAlumnoDto);
 			
 		} catch (Exception e) {
 			return new ModelAndView("paginaError");

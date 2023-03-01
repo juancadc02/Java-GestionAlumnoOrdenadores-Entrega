@@ -1,6 +1,7 @@
 package es.juancadc.ejemploWeb.web.Consultas;
 
 import java.util.List;
+import java.util.Optional;
 
 import es.juancadc.ejemploWeb.aplicacion.DAO.AlumnoDAO;
 import es.juancadc.ejemploWeb.aplicacion.DAO.PortatilDAO;
@@ -34,7 +35,7 @@ public interface ServicioConsultas {
 	 */
 	public void bajaAlumno(Integer numeroAlumno);
 	
-	public AlumnoDAO buscarAlumnoPorId(int numeroAlumno);
+	public Optional<AlumnoDAO> buscarAlumnoPorIdPersonal(int numeroAlumno);
 	
 	//Consulta Portatiles
 	

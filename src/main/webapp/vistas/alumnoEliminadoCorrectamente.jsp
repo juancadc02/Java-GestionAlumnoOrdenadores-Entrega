@@ -57,25 +57,27 @@ body {
     <h1 class="text-center mb-4">Datos Alumno Eliminado</h1>
     <form method="post">
      
-<!--  <table class="tablaMuestraAlumno" >
+  <table class="tablaMuestraAlumno" >
 <tr>
+<th>ID Alumno</th>
 
-<th>Nombre</th>
+<th>&nbsp;&nbsp;Nombre</th>
 
 <th>&nbsp;&nbsp;Telefono</th>
 
 </tr>
 
-<c:forEach var="listaAlumno" items="${lista}">
+<c:forEach var="listaAlumno" items="${alumnoEliminado}">
 
 	<tr>
-	<td>${listaAlumno.nombreAlumno}</td>
+	<td>${listaAlumno.numeroAlumno}</td>
+	<td>&nbsp;&nbsp;${listaAlumno.nombreAlumno}</td>
 	<td>&nbsp;&nbsp;${listaAlumno.telefonoAlumno}</td>
 	</tr>
 
 </c:forEach>
 
-</table>-->
+</table>
 
     </form>
     </div>

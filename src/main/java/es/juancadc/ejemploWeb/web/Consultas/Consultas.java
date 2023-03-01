@@ -8,6 +8,7 @@ package es.juancadc.ejemploWeb.web.Consultas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -61,9 +62,9 @@ public class Consultas implements ServicioConsultas {
 	}
 	
 	@Override
-	public AlumnoDAO buscarAlumnoPorId(int numeroAlumno) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<AlumnoDAO> buscarAlumnoPorIdPersonal(int numeroAlumno) {
+		
+		return ra.findById(numeroAlumno);
 	}
 	
 	
