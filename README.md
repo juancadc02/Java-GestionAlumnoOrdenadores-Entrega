@@ -1,3 +1,4 @@
+Enunciado:
 Cuando un alumno se matricula en un instituto se le asigna un portátil para trabajar. Mientras el alumno esté matriculado,
 usará siempre el mismo portátil. Es imprescindible conocer en todo momento qué portátil tiene un alumno y
 a qué alumno corresponde un portátil.
