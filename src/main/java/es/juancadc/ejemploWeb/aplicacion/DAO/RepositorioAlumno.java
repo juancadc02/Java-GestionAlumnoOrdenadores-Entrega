@@ -12,7 +12,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface RepositorioAlumno extends CrudRepository<AlumnoDAO,Integer> {
 
-	//Metodo adicional
+	//Metodo propio utilizado para devolver el alumno que hemos eliminado, por el ID de ese alumno.
 	 Optional<AlumnoDAO> findById(Integer numeroAlumno);
 	
 	

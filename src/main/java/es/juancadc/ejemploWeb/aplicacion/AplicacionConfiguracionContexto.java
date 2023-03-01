@@ -36,6 +36,9 @@ public class AplicacionConfiguracionContexto {
 	
 	@Autowired
 	private Environment env;
+	
+	//Configramos la conexion con la base de dato haciendo uso de las variables
+	//declaradas en el archivo confiracion.propreties
 	@Bean
 	public DataSource dataSource() {
 
@@ -47,21 +50,24 @@ public class AplicacionConfiguracionContexto {
 		return dataSource;
 	}
 
+	//Configuracion de JPA
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 
 		LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource());
+		//Aqui especificamos en que paquete estan las entidades.
 		entityManagerFactory.setPackagesToScan(AlumnoDAO.class.getPackage().getName());
 		
-		
+		//Le indicamos el tipo de base de datos que vamos a utilizar.
 		HibernateJpaVendorAdapter hibernateJpa = new HibernateJpaVendorAdapter();
 		hibernateJpa.setDatabase(Database.POSTGRESQL);
 		hibernateJpa.setDatabasePlatform("org.hibernate.dialect.PostgreSQLDialect");
 		hibernateJpa.setGenerateDdl(true);
 		hibernateJpa.setShowSql(true);
 		entityManagerFactory.setJpaVendorAdapter(hibernateJpa);
-		
+		//Configuracion hibernate haciendo uso de las variables que se estan en 
+		//congirucacion.properties
 		Properties propiedades = new Properties();
 		propiedades.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 		propiedades.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
@@ -72,6 +78,7 @@ public class AplicacionConfiguracionContexto {
 
 	}
 
+	//Gestor de transaciones, donde habilitamos las transaciones.
 	@Bean
 	public JpaTransactionManager transactionManager() {
 		JpaTransactionManager transactionManager = new JpaTransactionManager();

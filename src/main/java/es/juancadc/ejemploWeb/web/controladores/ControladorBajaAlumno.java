@@ -14,6 +14,16 @@ import es.juancadc.ejemploWeb.aplicacion.DAO.*;
 import es.juancadc.ejemploWeb.web.Consultas.Consultas;
 import es.juancadc.ejemploWeb.web.DTO.AlumnoDTO;
 import es.juancadc.ejemploWeb.web.DTO.ToDtoServicioImpl;
+
+/**
+ * 
+ * @author Juanca
+ *
+ *ControladorBajaAlumno: Controlador que controla la vista de bajaAlumno,
+ *alumnoEliminadoCorrectamente y error.
+ */
+
+
 @Controller
 public class ControladorBajaAlumno {
 

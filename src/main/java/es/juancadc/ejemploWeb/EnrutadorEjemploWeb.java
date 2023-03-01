@@ -8,6 +8,7 @@ import es.juancadc.ejemploWeb.web.WebConfiguracionContexto;
 /**
  * 
  * @author Juanca
+ * EnrutadorEjemploWeb:Clase configuracion a nivel aplicacion.
  *
  */
 

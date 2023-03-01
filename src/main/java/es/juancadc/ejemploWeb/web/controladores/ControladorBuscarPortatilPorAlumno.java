@@ -16,7 +16,13 @@ import es.juancadc.ejemploWeb.web.Consultas.Consultas;
 import es.juancadc.ejemploWeb.web.DTO.AlumnoDTO;
 import es.juancadc.ejemploWeb.web.DTO.PortatilDTO;
 import es.juancadc.ejemploWeb.web.DTO.ToDtoServicioImpl;
-
+/**
+ * 
+ * @author Juanca
+ *
+ *ControladorBuscarAlumnoPorPortatil: Controlador que controla la vista de buscarPortatilPorAlumno,
+ *resultadoBuscarPortatilPorAlumno y error.
+ */
 @Controller
 public class ControladorBuscarPortatilPorAlumno {
 

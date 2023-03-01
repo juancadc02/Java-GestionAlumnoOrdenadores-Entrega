@@ -15,7 +15,13 @@ import es.juancadc.ejemploWeb.web.Consultas.Consultas;
 import es.juancadc.ejemploWeb.web.DTO.AlumnoDTO;
 import es.juancadc.ejemploWeb.web.DTO.PortatilDTO;
 import es.juancadc.ejemploWeb.web.DTO.ToDtoServicioImpl;
-
+/**
+ * 
+ * @author Juanca
+ *
+ *ControladorListadoCompleto: Controlador que controla la vista de listadoCompleto,
+ *listadoCompleto y error.
+ */
 @Controller
 public class ControladorListadoCompleto {
 

@@ -27,7 +27,7 @@ import es.juancadc.ejemploWeb.aplicacion.DAO.RepositorioPortatil;
 public class Consultas implements ServicioConsultas {
 
 	
-	@Autowired
+	@Autowired //Intectamos la clase RepositorioAlumno.
 	private RepositorioAlumno ra;
 	
 	
@@ -70,7 +70,7 @@ public class Consultas implements ServicioConsultas {
 	
 	//Consultas de portatiles
 	
-	@Autowired
+	@Autowired //Intectamos la clase RepositorioPoratiles.
 	private RepositorioPortatil rp;
 	
 	
@@ -81,7 +81,7 @@ public class Consultas implements ServicioConsultas {
 		List<Integer> listaId = new ArrayList<Integer>();
 				
 				
-				//Select de toda la tabla alumnos
+				//Listado de toda la tabla alumnos
 				List<Integer> listaAlumnosID = new ArrayList<Integer>();
 				try {
 					List<AlumnoDAO> listaAlumnos = (List<AlumnoDAO>) ra.findAll();
@@ -95,7 +95,7 @@ public class Consultas implements ServicioConsultas {
 					e.printStackTrace();
 				}
 				
-				//Select de toda la tabla portatiles
+				//Listado de toda la tabla portatiles
 				List<PortatilDAO> listaPortatiles = new ArrayList<PortatilDAO>();
 				try {
 					listaPortatiles = (List<PortatilDAO>) rp.findAll();

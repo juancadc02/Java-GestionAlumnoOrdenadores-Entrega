@@ -13,7 +13,13 @@ import es.juancadc.ejemploWeb.aplicacion.DAO.PortatilDAO;
 import es.juancadc.ejemploWeb.web.Consultas.Consultas;
 import es.juancadc.ejemploWeb.web.DTO.PortatilDTO;
 import es.juancadc.ejemploWeb.web.DTO.ToDtoServicioImpl;
-
+/**
+ * 
+ * @author Juanca
+ *
+ *ControladorAñadirPortatil: Controlador que controla la vista de añadirPortatil,
+ *portatilAñadidoCorrectamente y error.
+ */
 @Controller
 public class ControladorAñadirPortatil {
 

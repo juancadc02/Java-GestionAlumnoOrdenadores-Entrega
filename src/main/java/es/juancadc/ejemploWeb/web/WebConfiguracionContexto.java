@@ -17,6 +17,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 public class WebConfiguracionContexto {
 
+	//Definimos donde se encuentran las vistas pasandole los prefijos y sufijos.
 	@Bean
     public ViewResolver mapeo(){
         InternalResourceViewResolver irvr = new InternalResourceViewResolver();
